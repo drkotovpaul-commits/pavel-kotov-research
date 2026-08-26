@@ -35,24 +35,17 @@
   >
 
 
-  <!-- Publications-specific layout -->
   <style>
-
-    /*
-      Two-card sections.
-
-      The global research-grid is retained for sections whose
-      architecture requires the standard multi-card layout.
-      This dedicated grid allows two-card publication sections
-      to use the complete available container width.
-    */
 
     .publication-grid-two {
 
       display: grid;
 
       grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+        repeat(
+          2,
+          minmax(0, 1fr)
+        );
 
       gap: 22px;
 
@@ -72,30 +65,18 @@
     }
 
 
-    /*
-      Actions associated with the released preprint.
-    */
+    .publication-card-link {
 
-    .publication-actions {
+      margin-top: auto;
 
-      display: flex;
+      padding-top: 24px;
 
-      flex-wrap: wrap;
-
-      align-items: center;
-
-      gap: 14px 28px;
-
-      margin-top: 22px;
+      margin-bottom: 0;
 
     }
 
 
-    .publication-actions a {
-
-      display: inline-flex;
-
-      align-items: center;
+    .publication-card-link a {
 
       color: var(--accent-dark);
 
@@ -110,16 +91,12 @@
     }
 
 
-    .publication-actions a:hover {
+    .publication-card-link a:hover {
 
       color: var(--title);
 
     }
 
-
-    /*
-      Responsive behaviour.
-    */
 
     @media (max-width: 700px) {
 
@@ -130,17 +107,6 @@
         gap: 18px;
 
         margin-top: 32px;
-
-      }
-
-
-      .publication-actions {
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 12px;
 
       }
 
@@ -334,6 +300,18 @@
             Released · Preprint v1.0
           </div>
 
+          <p class="publication-card-link">
+
+            <a
+              href="../preprints/AMR_Framework_Paper_Preprint_v1_0_2.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              Open Preprint v1.0 PDF →
+            </a>
+
+          </p>
+
         </article>
 
 
@@ -359,32 +337,20 @@
             Fixed public record
           </div>
 
+          <p class="publication-card-link">
+
+            <a
+              href="https://drkotovpaul-commits.github.io/Adaptive-movement-research/publications/"
+              target="_blank"
+              rel="noopener"
+            >
+              AMR Publication Record →
+            </a>
+
+          </p>
+
         </article>
 
-
-      </div>
-
-
-      <div
-        class="publication-actions"
-        aria-label="Preprint links"
-      >
-
-        <a
-          href="../preprints/AMR_Framework_Paper_Preprint_v1_0_2.pdf"
-          target="_blank"
-          rel="noopener"
-        >
-          Open Preprint v1.0 PDF →
-        </a>
-
-        <a
-          href="https://drkotovpaul-commits.github.io/Adaptive-movement-research/publications/"
-          target="_blank"
-          rel="noopener"
-        >
-          AMR Publication Record →
-        </a>
 
       </div>
 
@@ -437,7 +403,7 @@
 
 
 
-  <!-- ================= CURRENT MANUSCRIPT ================= -->
+  <!-- ================= CURRENT MANUSCRIPT DEVELOPMENT ================= -->
 
   <section>
 
@@ -808,7 +774,8 @@
             scholarly status.
           </p>
 
-          <p>
+          <p class="publication-card-link">
+
             <a
               href="https://drkotovpaul-commits.github.io/Adaptive-movement-research/publications/"
               target="_blank"
@@ -816,6 +783,7 @@
             >
               Open AMR Publications →
             </a>
+
           </p>
 
         </article>
@@ -833,7 +801,8 @@
             Framework Paper development.
           </p>
 
-          <p>
+          <p class="publication-card-link">
+
             <a
               href="https://drkotovpaul-commits.github.io/Adaptive-movement-research/papers/"
               target="_blank"
@@ -841,6 +810,7 @@
             >
               Open Framework Paper →
             </a>
+
           </p>
 
         </article>
